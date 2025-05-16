@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Predicción del Precio del Cacao',
       theme: ThemeData(
+        fontFamily: GoogleFonts.montserrat().fontFamily,
         colorScheme: ColorScheme(
           brightness: Brightness.light,
           primary: const Color(0xFF6F4E37), // Café oscuro
@@ -36,11 +37,7 @@ class MyApp extends StatelessWidget {
           ),
           iconTheme: const IconThemeData(color: Colors.white),
         ),
-        textTheme: GoogleFonts.montserratTextTheme().copyWith(
-          bodyLarge: GoogleFonts.montserrat(fontSize: 18, color: const Color(0xFF6F4E37)),
-          bodyMedium: GoogleFonts.montserrat(fontSize: 16, color: const Color(0xFF6F4E37)),
-          titleLarge: GoogleFonts.montserrat(fontSize: 24, fontWeight: FontWeight.bold, color: const Color(0xFF6F4E37)),
-        ),
+        textTheme: GoogleFonts.montserratTextTheme(),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             backgroundColor: const Color(0xFFD9A066),

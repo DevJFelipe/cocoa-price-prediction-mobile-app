@@ -41,10 +41,10 @@ class HomeScreen extends StatelessWidget {
                   padding: const EdgeInsets.all(32),
                   child: Column(
                     children: [
-                      const Icon(
-                        Icons.coffee,
-                        size: 100,
-                        color: Color(0xFF6F4E37),
+                      Image.asset(
+                        'assets/icono_app.png',
+                        width: 100,
+                        height: 100,
                       ),
                       const SizedBox(height: 24),
                       Text(

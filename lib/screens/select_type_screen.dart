@@ -10,7 +10,20 @@ class SelectTypeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Seleccionar Tipo de Predicción'),
+        title: FittedBox(
+          fit: BoxFit.scaleDown,
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'Seleccionar Tipo de Predicción',
+            style: GoogleFonts.montserrat(
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+              fontSize: 22,
+            ),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+          ),
+        ),
         backgroundColor: const Color(0xFF6F4E37),
         centerTitle: true,
       ),
