@@ -14,7 +14,7 @@ Esta app permite consultar predicciones de precios del cacao en USD/tonelada y s
 - Manejo de errores y validaciones.
 - Interfaz moderna con paleta cálida, gradientes y tarjetas.
 - Icono y nombre personalizados: **Predicción Cacao**.
-- Compatible con Android y iOS.
+- Compatible con Android.
 
 ## Instalación
 
@@ -53,7 +53,3 @@ Esta app permite consultar predicciones de precios del cacao en USD/tonelada y s
 ## Licencia
 
 Este proyecto está bajo la licencia MIT.
-
----
-
-¿Quieres que agregue una sección de contacto, instrucciones para producción o algún detalle extra?
