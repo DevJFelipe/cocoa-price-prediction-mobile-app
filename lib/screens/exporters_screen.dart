@@ -198,10 +198,26 @@ class _ExportersScreenState extends State<ExportersScreen> {
                               const Icon(Icons.attach_money, color: Color(0xFFD9A066)),
                               const SizedBox(width: 8),
                               Text(
-                                '\$${prediction!.precioPredicho.toStringAsFixed(2)}',
+                                '${prediction!.precioPredicho.toStringAsFixed(2)} USD/tonelada',
                                 style: GoogleFonts.montserrat(
-                                  fontSize: 32,
+                                  fontSize: 24,
                                   fontWeight: FontWeight.bold,
+                                  color: const Color(0xFF6F4E37),
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 10),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const Icon(Icons.currency_exchange, color: Color(0xFFD9A066)),
+                              const SizedBox(width: 8),
+                              Text(
+                                _getPrecioCOPkg(prediction!.precioPredicho),
+                                style: GoogleFonts.montserrat(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w600,
                                   color: const Color(0xFF6F4E37),
                                 ),
                               ),
@@ -260,5 +276,13 @@ class _ExportersScreenState extends State<ExportersScreen> {
   String _capitalizeFirstLetter(String text) {
     if (text.isEmpty) return text;
     return text[0].toUpperCase() + text.substring(1);
+  }
+
+  String _getPrecioCOPkg(double precioUsdTonelada) {
+    // 1 tonelada = 1000 kg, ejemplo: 1 USD = 4200 COP
+    const tasaCambio = 4200.0;
+    final precioUsdKg = precioUsdTonelada / 1000.0;
+    final precioCopKg = precioUsdKg * tasaCambio;
+    return 'Equivalente: ${precioCopKg.toStringAsFixed(2)} COP/kg';
   }
 } 

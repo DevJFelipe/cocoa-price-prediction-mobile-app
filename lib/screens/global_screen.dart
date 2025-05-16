@@ -161,12 +161,20 @@ class _GlobalScreenState extends State<GlobalScreen> {
                             children: [
                               const Icon(Icons.attach_money, color: Color(0xFFD9A066)),
                               const SizedBox(width: 8),
-                              Text(
-                                '\$${prediction!.precioPredicho.toStringAsFixed(2)}',
-                                style: GoogleFonts.montserrat(
-                                  fontSize: 32,
-                                  fontWeight: FontWeight.bold,
-                                  color: const Color(0xFF6F4E37),
+                              Expanded(
+                                child: FittedBox(
+                                  fit: BoxFit.scaleDown,
+                                  alignment: Alignment.centerLeft,
+                                  child: Text(
+                                    '${prediction!.precioPredicho.toStringAsFixed(2)} USD/tonelada',
+                                    style: GoogleFonts.montserrat(
+                                      fontSize: 28,
+                                      fontWeight: FontWeight.bold,
+                                      color: const Color(0xFF6F4E37),
+                                    ),
+                                    maxLines: 1,
+                                    softWrap: false,
+                                  ),
                                 ),
                               ),
                             ],
